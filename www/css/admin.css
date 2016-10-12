@@ -1,0 +1,36 @@
+#content {
+	margin-top: 40px;
+	padding: 25px;
+	color: white;
+	background-color: rgba(0,0,0,0.5)
+}
+
+#content table {
+	/*background-color: rgba(0,0,0,0.6);*/
+	width: 100%;
+}
+
+#content table td.clock-in-time {
+	display: none;
+}
+
+#content table td.clocked-in-by {
+	display: none;
+}
+
+#content h1 {
+	font-size: 1.4em;
+}
+
+#content h2 {
+	font-size: 1.2em;
+}
+
+#content h3 {
+	font-size: 1em;
+}
+
+#content ul {
+	list-style-type: none;
+	font-size: 1.2em;
+}
