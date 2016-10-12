@@ -42,6 +42,7 @@
     <link rel="stylesheet" type="text/css" href="css/admin.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="css/checkin.css">
     <title>Hello World</title>
 </head>
 
@@ -101,7 +102,7 @@
         }
         $(function(){
             var role=window.location.href.split('?')[1];
-            var url="roles/"+role+".html";
+            var url="roles/"+role.replace("#","")+".html";
             console.log(url);
             $.ajax({
                 type: 'GET',
@@ -110,21 +111,45 @@
             }).done(function(data){
                 $(".menubar ul").append(data);
                 initEvents();
-            }).error(function(data){alert(JSON.stringify(data));});
+            }).error(function(data){console.log(data);});
             loadContent("content/about.html");
         });
         function initEvents(){
-            $("#admin-teams").click(function(data){
+            $("#admin-teams").click(function(event){
                 loadContent("adminContent/teams.html");
+                event.preventDefault();
             });
 
-            $("#admin-reports").click(function(data){
+            $("#admin-reports").click(function(event){
                 loadContent("adminContent/reports.html");
+                event.preventDefault();
             });
 
             $("#content table td.name").click(function(event){
                 console.log(event);
                 loadContent("adminContent/user_report.html");
+                event.preventDefault();
+            });
+
+            $("#content .team-report .team2").click(function(event){
+                loadContent("adminContent/team_report.html");
+                event.preventDefault();
+            });
+
+            $("#content .user-report").click(function(event){
+                loadContent("adminContent/user_report.html");
+                event.preventDefault();
+            });
+
+            $(".logout").click(function(event){
+                window.location="index.html";
+                event.preventDefault();
+            });
+
+
+            $("#emp-checkin").click(function(event){
+                $("#content").css("background-color","transparent")
+                loadContent("adminContent/checkin.html");
                 event.preventDefault();
             });
         }

@@ -1,0 +1,65 @@
+.dateTimeDisplay {
+    text-align: center;
+}
+
+.dateTimeDisplay .dateDisplay {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.dateTimeDisplay .timeDisplay {
+    margin: 0px;
+    padding: 0px;
+    font-size: 4.2em;
+    color: #444;
+}
+
+.checkin-container {
+    margin: 20px;
+    text-align: center;
+}
+
+.checkin-container button {
+    padding: 20px 100px;
+    font-size: 1.2em;
+}
+
+.locationTag {
+    text-align: center;
+    margin: 0px auto;
+    padding: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    height:140px;
+    width: 140px;
+    box-shadow: 0px 0px 10px #000;
+    font-size: 1.0em;
+}
+
+.locationLabel {
+    color: #263238;
+    font-weight: 600;
+    font-size: 1.4em;
+    color: black;
+    text-shadow: 1px 1px #aaa;
+    text-align: center;
+}
+
+button.pure-button.button-s {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: rgb(66, 184, 221); /* this is a light blue */
+}
+
+button.pure-button.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.lastLogin {
+    text-align: center;
+    color: white;
+}
