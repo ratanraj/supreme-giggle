@@ -101,8 +101,9 @@
             })
         }
         $(function(){
-            var role=window.location.href.split('?')[1];
-            var url="roles/"+role.replace("#","")+".html";
+            //var role=window.location.href.split('?')[1];
+            role=window.localStorage.getItem("userRole");
+            var url="roles/"+role+".html";
             console.log(url);
             $.ajax({
                 type: 'GET',
